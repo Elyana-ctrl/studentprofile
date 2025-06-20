@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Directory - Profiles</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="University Logo" height="30" class="d-inline-block align-top me-2">
+                Student Directory
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="profiles.html">Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutBtn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Student Profiles</h1>
+            <div class="search-box">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search students..." id="searchInput">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card profile-card">
+                    <img src="images/profile1.jpg" class="card-img-top profile-img" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">James Carter</h5>
+                        <p class="card-text">Computer Science</p>
+                        <p class="card-text"><small class="text-muted">ID: CS21001</small></p>
+                        <a href="profile-detail.html?id=1" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card profile-card">
+                    <img src="images/profile2.jpg" class="card-img-top profile-img" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Roberts</h5>
+                        <p class="card-text">Information Technology</p>
+                        <p class="card-text"><small class="text-muted">ID: IT21002</small></p>
+                        <a href="profile-detail.html?id=2" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card profile-card">
+                    <img src="images/profile3.jpg" class="card-img-top profile-img" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">Daniel Thompson</h5>
+                        <p class="card-text">Data Science</p>
+                        <p class="card-text"><small class="text-muted">ID: DS21003</small></p>
+                        <a href="profile-detail.html?id=3" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card profile-card">
+                    <img src="images/profile4.jpg" class="card-img-top profile-img" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">Sophia Bennet</h5>
+                        <p class="card-text">Software Engineering</p>
+                        <p class="card-text"><small class="text-muted">ID: SE21004</small></p>
+                        <a href="profile-detail.html?id=4" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card profile-card">
+                    <img src="images/profile5.jpg" class="card-img-top profile-img" alt="Student Profile">
+                    <div class="card-body">
+                        <h5 class="card-title">Leo Anderson</h5>
+                        <p class="card-text">Cyber Security</p>
+                        <p class="card-text"><small class="text-muted">ID: CY21005</small></p>
+                        <a href="profile-detail.html?id=5" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>About Student Profile Directory</h5>
+                    <p>A comprehensive directory of student profiles for academic purposes.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2023 Student Profile Directory. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

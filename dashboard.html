@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Directory - Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="University Logo" class="navbar-logo">
+                <span class="navbar-brand-text">Student Directory</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profiles.html">Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutBtn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header text-center mb-5">
+            <h1 class="display-5 fw-bold text-primary">Dashboard Overview</h1>
+            <p class="lead text-muted">Key metrics and student data at a glance</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row g-4 mb-5">
+            <!-- Total Students -->
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card bg-primary">
+                    <i class="bi bi-people stat-icon"></i>
+                    <h3>125</h3>
+                    <p>Total Students</p>
+                    <div class="stat-badge">+5%</div>
+                </div>
+            </div>
+            
+            <!-- Active Students -->
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card bg-success">
+                    <i class="bi bi-check-circle stat-icon"></i>
+                    <h3>118</h3>
+                    <p>Active Students</p>
+                    <div class="stat-badge">+3%</div>
+                </div>
+            </div>
+            
+            <!-- Departments -->
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card bg-info">
+                    <i class="bi bi-building stat-icon"></i>
+                    <h3>8</h3>
+                    <p>Departments</p>
+                </div>
+            </div>
+            
+            <!-- New This Month -->
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card bg-warning">
+                    <i class="bi bi-graph-up-arrow stat-icon"></i>
+                    <h3>6</h3>
+                    <p>New This Month</p>
+                    <div class="stat-badge">+2</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="row g-4">
+            <!-- Department Chart -->
+            <div class="col-lg-8">
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h5><i class="bi bi-pie-chart me-2"></i>Student Distribution by Department</h5>
+                    </div>
+                    <div class="card-body" style="position: relative; height: 300px;">
+                        <canvas id="departmentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Activities -->
+            <div class="col-lg-4">
+                <div class="activity-card">
+                    <div class="card-header">
+                        <h5><i class="bi bi-clock-history me-2"></i>Recent Activities</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-item">
+                            <div class="activity-badge bg-primary"></div>
+                            <div class="activity-content">
+                                <p class="mb-1">New student profile added</p>
+                                <small class="text-muted">2 hours ago</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-badge bg-success"></div>
+                            <div class="activity-content">
+                                <p class="mb-1">Profile information updated</p>
+                                <small class="text-muted">5 hours ago</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-badge bg-info"></div>
+                            <div class="activity-content">
+                                <p class="mb-1">New message received</p>
+                                <small class="text-muted">1 day ago</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-badge bg-warning"></div>
+                            <div class="activity-content">
+                                <p class="mb-1">System maintenance scheduled</p>
+                                <small class="text-muted">2 days ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="text-center text-muted">
+                <p class="mb-1">A comprehensive directory of student profiles for academic purposes.</p>
+                <p class="mb-0">© 2023 Student Profile Directory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <!-- Chart Initialization -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Pie Chart Configuration
+            const ctx = document.getElementById('departmentChart');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Computer Science', 'IT', 'Data Science', 'Software Eng', 'Cyber Security'],
+                    datasets: [{
+                        data: [25, 22, 18, 15, 12],
+                        backgroundColor: [
+                            '#2c3e50',
+                            '#1abc9c',
+                            '#3498db',
+                            '#9b59b6',
+                            '#f39c12'
+                        ],
+                        borderColor: [
+                            '#1a252f',
+                            '#16a085',
+                            '#2980b9',
+                            '#8e44ad',
+                            '#d35400'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.label}: ${context.raw} students`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

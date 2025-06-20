@@ -1,0 +1,530 @@
+/* General Styles */
+/* Add this at the top of your CSS file */
+body.menu-page {
+    background: linear-gradient(135deg, #ffffff 0%, #295d85 100%) !important;
+    min-height: 100vh;
+    margin: 0;
+    background-attachment: fixed; /* Ensures gradient covers entire page */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Login Page Container */
+.login-page {
+    background: linear-gradient(135deg, #ffffff 0%, #295d85 100%) !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    padding: 20px; /* Adds breathing room on small screens */
+}
+
+/* Login Card Styling */
+.login-card {
+    background-color: rgb(104, 104, 104);
+    border-radius: 10px;
+    padding: 40px; /* Increased internal spacing */
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 450px; /* Limits card width on large screens */
+    margin: 0 auto; /* Centers card horizontally */
+}
+
+/* Logo Spacing */
+.logo {
+    height: 160px;
+    width: auto;
+    margin-bottom: 20px; /* Space below logo */
+}
+
+/* Form Input Spacing */
+.form-control {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+/* Login Button */
+.btn-primary {
+    margin-top: 10px; /* Space above button */
+}
+
+/* Login Page Styles */
+.login-page {
+    background: linear-gradient(135deg, #2c3e50 0%, #1abc9c 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Login page heading */
+.login-card h2 {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Optional: adds subtle shadow for better readability */
+    margin-bottom: 1.5rem; /* Adds space below heading */
+}
+
+/* Login form labels */
+.login-card label {
+    color: white !important;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Input fields */
+.login-card .form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #333;
+}
+
+/* Placeholder text */
+.login-card ::placeholder {
+    color: #aaa !important;
+}
+
+/* Forgot password link */
+.forgot-password-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.forgot-password-link:hover {
+    color: white !important;
+    text-decoration: underline;
+}
+
+.login-footer {
+    color: white;
+    margin-top: auto;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-card .card-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.menu-card {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.menu-icon {
+    font-size: 2.5rem;
+    color: #1abc9c;
+    margin-bottom: 15px;
+}
+
+.profile-card {
+    overflow: hidden;
+}
+
+.profile-img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover .profile-img {
+    transform: scale(1.05);
+}
+
+.profile-detail-img {
+    border-radius: 10px 10px 0 0;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Activity Feed */
+.activity-feed {
+    padding-left: 0;
+    list-style: none;
+}
+
+.activity-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: white;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+/* Timeline */
+.activity-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.activity-timeline .activity-item {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.activity-timeline .activity-item:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #e9ecef;
+}
+
+.activity-timeline .activity-item:last-child:before {
+    height: 0;
+}
+
+.activity-timeline .activity-item:after {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #1abc9c;
+    border: 2px solid white;
+}
+
+.activity-timeline .activity-date {
+    font-weight: 600;
+    color: #1abc9c;
+    margin-bottom: 5px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.btn-primary:hover {
+    background-color: #1a252f;
+    border-color: #1a252f;
+}
+
+.btn-outline-primary {
+    color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+/* Colors */
+.bg-primary {
+    background-color: #2c3e50 !important;
+}
+
+.text-primary {
+    color: #2c3e50 !important;
+}
+
+.bg-success {
+    background-color: #1abc9c !important;
+}
+
+.text-success {
+    color: #1abc9c !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .profile-detail-img {
+        height: 200px;
+    }
+    
+    .search-box {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+/* Activity Feed Styling */
+.activity-item {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start; /* Align items to top */
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* Increased from 15px */
+    color: white;
+    flex-shrink: 0; /* Prevents icon from shrinking */
+    margin-top: 3px; /* Fine-tune vertical alignment */
+}
+
+.activity-content {
+    flex: 1;
+    padding-top: 2px; /* Optional: Adjust text baseline */
+}
+
+/* Specific icon colors */
+.bg-primary { background-color: #2c3e50 !important; }
+.bg-success { background-color: #1abc9c !important; }
+.bg-info { background-color: #3498db !important; }
+.bg-warning { background-color: #f39c12 !important; }
+
+.activity-item {
+    padding-left: 10px; /* Additional left padding */
+}
+
+.activity-icon {
+    margin-right: 25px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem; /* Larger icon */
+}
+
+.activity-content p {
+    margin-bottom: 0.3rem; /* Space between lines */
+}
+
+.activity-content small {
+    display: block; /* Forces date to new line */
+    margin-top: 2px;
+    color: #6c757d;
+}
+
+/* Dashboard navbar logo */
+.navbar-brand img {
+    height: 40px; /* Adjust as needed */
+    width: auto; /* Maintain aspect ratio */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05); /* Slight grow on hover */
+}
+
+/* Menu Page Styles */
+.menu-card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Color Variants */
+.bg-primary { background-color: #2c3e50 !important; }
+.bg-success { background-color: #1abc9c !important; }
+
+/* Buttons */
+.btn-primary {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.btn-success {
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Specific Styles */
+.dashboard-container {
+    padding: 2rem;
+    background-color: #f8fafc;
+}
+
+.dashboard-header {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Stat Cards */
+.stat-card {
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.stat-card h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.stat-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Chart Card */
+.chart-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.chart-card .card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1.25rem 1.5rem;
+}
+
+.chart-card .card-body {
+    padding: 1.5rem;
+}
+
+/* Color Classes */
+.bg-primary { background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%); }
+.bg-success { background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%); }
+.bg-info { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); }
+.bg-warning { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); }
+
+.dark-mode .dashboard-container {
+    background: #1a1a1a;
+}
+.dark-mode .chart-card,
+.dark-mode .activity-card {
+    background: #2d2d2d;
+    color: white;
+}
+
+/* Activity Card Padding */
+.activity-card .card-header {
+    padding: 1.25rem 1.5rem; /* Increased from default */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.activity-card .card-body {
+    padding: 1.5rem; /* Increased internal spacing */
+}
+
+/* Activity Items */
+.activity-item {
+    padding: 0.75rem 1rem; /* Horizontal and vertical padding */
+    margin: 0 -1rem; /* Negative margin to counteract card-body padding */
+    transition: background 0.2s ease;
+}
+
+.activity-item:hover {
+    background: rgba(0, 0, 0, 0.02); /* Subtle hover effect */
+}
+
+/* Activity Badge (icon) */
+.activity-badge {
+    width: 12px;
+    height: 12px;
+    margin-right: 1rem; /* Increased from 0.75rem */
+    margin-top: 5px; /* Better vertical alignment */
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Activity Content */
+.activity-content {
+    padding-right: 0.5rem; /* Right padding for text */
+}
+
+.activity-content p {
+    margin-bottom: 0.25rem;
+    line-height: 1.4; /* Better text readability */
+}
+
+.activity-content small {
+    display: block;
+    margin-top: 2px;
+}
+

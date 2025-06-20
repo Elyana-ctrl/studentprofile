@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Directory - Profile Detail</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="University Logo" height="30" class="d-inline-block align-top me-2">
+                Student Directory
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profiles.html">Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutBtn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="images/profile1.jpg" class="card-img-top profile-detail-img" alt="Student Profile" id="profileImage">
+                    <div class="card-body text-center">
+                        <h3 class="card-title" id="studentName">James Carter</h3>
+                        <h5 class="text-muted" id="studentId">ID: CS21001</h5>
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="#" class="btn btn-outline-primary me-2"><i class="bi bi-envelope"></i> Message</a>
+                            <a href="#" class="btn btn-outline-secondary"><i class="bi bi-printer"></i> Print</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Quick Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Program</span>
+                                <span class="fw-bold" id="studentProgram">Computer Science</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Faculty</span>
+                                <span class="fw-bold" id="studentFaculty">Computing</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Year</span>
+                                <span class="fw-bold" id="studentYear">2</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Status</span>
+                                <span class="badge bg-success" id="studentStatus">Active</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#personal">Personal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#academic">Academic</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#activities">Activities</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body tab-content">
+                        <div class="tab-pane fade show active" id="personal">
+                            <h4 class="mb-4">Personal Information</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>Full Name:</strong> <span id="fullName">James Carter</span></p>
+                                    <p><strong>IC Number:</strong> <span id="icNumber">010101-01-0101</span></p>
+                                    <p><strong>Date of Birth:</strong> <span id="dob">1 January 2001</span></p>
+                                    <p><strong>Gender:</strong> <span id="gender">Male</span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Email:</strong> <span id="email">james@student.uitm.edu.my</span></p>
+                                    <p><strong>Phone:</strong> <span id="phone">+6012-345 6789</span></p>
+                                    <p><strong>Address:</strong> <span id="address">123 Jalan Universiti, 40450 Shah Alam, Selangor</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="academic">
+                            <h4 class="mb-4">Academic Information</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>Program:</strong> <span id="academicProgram">Bachelor of Computer Science</span></p>
+                                    <p><strong>Faculty:</strong> <span id="academicFaculty">Faculty of Computer and Mathematical Sciences</span></p>
+                                    <p><strong>Campus:</strong> <span id="campus">Shah Alam</span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Current Semester:</strong> <span id="semester">4</span></p>
+                                    <p><strong>CGPA:</strong> <span id="cgpa">3.75</span></p>
+                                    <p><strong>Expected Graduation:</strong> <span id="graduation">June 2024</span></p>
+                                </div>
+                            </div>
+                            
+                            <h5 class="mt-4">Current Courses</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Course</th>
+                                            <th>Credit</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>CS123</td>
+                                            <td>Data Structures</td>
+                                            <td>3</td>
+                                            <td><span class="badge bg-success">Enrolled</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS124</td>
+                                            <td>Algorithms</td>
+                                            <td>3</td>
+                                            <td><span class="badge bg-success">Enrolled</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS125</td>
+                                            <td>Database Systems</td>
+                                            <td>3</td>
+                                            <td><span class="badge bg-success">Enrolled</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="activities">
+                            <h4 class="mb-4">Activities & Achievements</h4>
+                            <div class="activity-timeline">
+                                <div class="activity-item">
+                                    <div class="activity-date">2023</div>
+                                    <div class="activity-content">
+                                        <h5>Dean's List</h5>
+                                        <p>Awarded for academic excellence in Semester 3</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-date">2022</div>
+                                    <div class="activity-content">
+                                        <h5>Hackathon Winner</h5>
+                                        <p>1st place in University Hackathon Competition</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-date">2022</div>
+                                    <div class="activity-content">
+                                        <h5>Programming Club</h5>
+                                        <p>Active member of the University Programming Club</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>About Student Profile Directory</h5>
+                    <p>A comprehensive directory of student profiles for academic purposes.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2023 Student Profile Directory. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
